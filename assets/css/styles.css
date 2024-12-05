@@ -8,26 +8,40 @@ body {
 }
 
 /* Navigation Bar */
-.navbar {
-    background-color: #eaeaea; /* Light Gray */
-    padding: 10px 20px;
-}
-
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #2E8B57; /* Dark Green */
+    display: flex;
+    align-items: center;
 }
 
-.navbar .nav-link {
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #2E8B57;
+}
+
+.navbar-brand small {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
     font-weight: 500;
+    color: #2E8B57;
     margin: 0 10px;
 }
 
-.navbar .nav-link.active,
-.navbar .nav-link:hover {
-    color: #1B5E20; /* Slightly darker green for hover/active */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #1B5E20;
+    font-weight: bold;
 }
 
 /* Hero Section */
@@ -145,41 +159,27 @@ header a:hover {
     margin-top: 15px;
 }
 /* Success Stories Section */
-#success-stories {
-    padding: 50px 20px;
-    text-align: center;
+#success-stories .card {
+    border-radius: 10px;
+    overflow: hidden; /* Ensures image fits the card */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+#success-stories .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#success-stories .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
 }
 
 #success-stories h2 {
     font-size: 2rem;
     color: #2E8B57;
     margin-bottom: 30px;
-}
-
-#success-stories .card {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
-    margin-bottom: 20px;
-}
-
-#success-stories .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#success-stories .card h5 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-#success-stories .card p {
-    font-size: 1rem;
-    color: #555;
 }
 
 /* Footer Section */
